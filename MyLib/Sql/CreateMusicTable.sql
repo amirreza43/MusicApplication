@@ -13,6 +13,8 @@ create table albums (
 create table songs (
     id integer primary key AUTOINCREMENT,
     name varchar(20),
+    genre varchar(20),
+    length integer,
     album_id integer,
     FOREIGN KEY (album_id) references albums(id)
 );

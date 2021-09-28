@@ -11,7 +11,9 @@ namespace MainApp
         {
             //Console.WriteLine("Hello World!");
 
-            Sql.QueryArtists();
+            Sql.QueryAllArtists();
+            Sql.QueryAllAlbums();
+            Sql.QueryAllSongs();
         }
     }
 }
