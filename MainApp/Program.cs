@@ -1,4 +1,7 @@
 ﻿using System;
+using MyLib;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace MainApp
 {
@@ -6,7 +9,9 @@ namespace MainApp
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            //Console.WriteLine("Hello World!");
+
+            Sql.QueryArtists();
         }
     }
 }
