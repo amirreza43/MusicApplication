@@ -1,0 +1,12 @@
+C:\Bootcamp\C#\Day 7\MusicApplication\MyLib\bin\Debug\net5.0\MyLib.deps.json
+C:\Bootcamp\C#\Day 7\MusicApplication\MyLib\bin\Debug\net5.0\MyLib.dll
+C:\Bootcamp\C#\Day 7\MusicApplication\MyLib\bin\Debug\net5.0\ref\MyLib.dll
+C:\Bootcamp\C#\Day 7\MusicApplication\MyLib\bin\Debug\net5.0\MyLib.pdb
+C:\Bootcamp\C#\Day 7\MusicApplication\MyLib\obj\Debug\net5.0\MyLib.csprojAssemblyReference.cache
+C:\Bootcamp\C#\Day 7\MusicApplication\MyLib\obj\Debug\net5.0\MyLib.GeneratedMSBuildEditorConfig.editorconfig
+C:\Bootcamp\C#\Day 7\MusicApplication\MyLib\obj\Debug\net5.0\MyLib.AssemblyInfoInputs.cache
+C:\Bootcamp\C#\Day 7\MusicApplication\MyLib\obj\Debug\net5.0\MyLib.AssemblyInfo.cs
+C:\Bootcamp\C#\Day 7\MusicApplication\MyLib\obj\Debug\net5.0\MyLib.csproj.CoreCompileInputs.cache
+C:\Bootcamp\C#\Day 7\MusicApplication\MyLib\obj\Debug\net5.0\MyLib.dll
+C:\Bootcamp\C#\Day 7\MusicApplication\MyLib\obj\Debug\net5.0\ref\MyLib.dll
+C:\Bootcamp\C#\Day 7\MusicApplication\MyLib\obj\Debug\net5.0\MyLib.pdb
