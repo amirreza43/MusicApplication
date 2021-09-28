@@ -79,7 +79,8 @@ namespace MyLib
             }
         }
 
-        public static void QueryMinLengthSongs(int songLength){
+        public static void QueryMinLengthSongs(int songLength)
+        {
             using var connection = new SqliteConnection("Data Source=./MyLib/data/database.db");
             connection.Open();
             var command = connection.CreateCommand();
@@ -106,15 +107,18 @@ namespace MyLib
                 Console.WriteLine($"id: {id}, song name: {name}, genre: {genre}, length: {length}s");
             }
         }
-        public static void QueryAnArtist(string artistName){
+        public static void QueryAnArtist(string artistName)
+        {
             using var connection = new SqliteConnection("Data Source=./MyLib/data/database.db");
             connection.Open();
             var command = connection.CreateCommand();
 
             command.CommandText = @"
-                select *
-                from artists
-                where name = $artistName
+                Select art.name, alb.name
+                From artists as art
+                JOIN albums as alb 
+                on art.id = alb.artist_id
+                where art.name = $artistName
             ";
 
             command.Parameters.AddWithValue("$artistName", artistName);
@@ -123,14 +127,15 @@ namespace MyLib
 
             while (reader.Read())
             {
-                var id = reader.GetInt32(0);
-                var name = reader.GetString(1);
-               
+                //var id = reader.GetInt32(0);
+                var name = reader.GetString(0);
+                var albumName = reader.GetString(1);
 
-                Console.WriteLine($"id: {id}, artist name: {name}");
+                Console.WriteLine($"artist name: {name}, album name: {albumName}");
             }
         }
-        public static void QuerySongsByArtist(string artistName){
+        public static void QuerySongsByArtist(string artistName)
+        {
             using var connection = new SqliteConnection("Data Source=./MyLib/data/database.db");
             connection.Open();
             var command = connection.CreateCommand();
@@ -158,12 +163,13 @@ namespace MyLib
                 var songGenre = reader.GetString(2);
                 var songLength = reader.GetString(3);
                 var artName = reader.GetString(4);
-               
+
 
                 Console.WriteLine($"Song name: {sName}, genre: {songGenre}, length: {songLength}, Artist: {artName}");
             }
         }
-        public static void QueryTotalSongsByArtist(string artistName){
+        public static void QueryTotalSongsByArtist(string artistName)
+        {
             using var connection = new SqliteConnection("Data Source=./MyLib/data/database.db");
             connection.Open();
             var command = connection.CreateCommand();
@@ -189,10 +195,11 @@ namespace MyLib
                 Console.WriteLine($"Total songs by {artistName}: {songCount}");
             }
 
-            
+
         }
 
-        public static void QuerySongsByGenre(string genre){
+        public static void QuerySongsByGenre(string genre)
+        {
             using var connection = new SqliteConnection("Data Source=./MyLib/data/database.db");
             connection.Open();
             var command = connection.CreateCommand();
@@ -220,7 +227,8 @@ namespace MyLib
             }
         }
 
-        public static void QueryTotalSongsByAlbums(string albumName){
+        public static void QueryTotalSongsByAlbums(string albumName)
+        {
             using var connection = new SqliteConnection("Data Source=./MyLib/data/database.db");
             connection.Open();
             var command = connection.CreateCommand();
@@ -244,7 +252,7 @@ namespace MyLib
                 Console.WriteLine($"Total songs by the album, {albumName}: {albCount}");
             }
 
-            
+
         }
     }
 }
