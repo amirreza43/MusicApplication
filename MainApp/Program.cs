@@ -16,6 +16,10 @@ namespace MainApp
             // Sql.QueryAllSongs();
             // Sql.QueryMinLengthSongs(180);
             // Sql.QueryAnArtist("Artist A");
+            // Sql.QuerySongsByArtist("Artist A");
+            // Sql.QueryTotalSongsByArtist("Artist A");
+            // Sql.QuerySongsByGenre("Pop");
+            // Sql.QueryTotalSongsByAlbums("Album A1");
         
         }
     }
